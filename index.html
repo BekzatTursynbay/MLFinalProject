@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Score Prediction</title>
+</head>
+<body>
+    <h1>Credit Score Prediction</h1>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="Age"><br>
+        Annual Income: <input type="number" step="0.01" name="Annual_Income"><br>
+        Monthly Inhand Salary: <input type="number" step="0.01" name="Monthly_Inhand_Salary"><br>
+        Num Bank Accounts: <input type="number" name="Num_Bank_Accounts"><br>
+        Delay from due date: <input type="number" name="Delay_from_due_date"><br>
+        Num of Delayed Payment: <input type="number" name="Num_of_Delayed_Payment"><br>
+        Outstanding Debt: <input type="number" step="0.01" name="Outstanding_Debt"><br>
+        Credit History Age: <input type="number" step="0.01" name="Credit_History_Age"><br>
+        Monthly Balance: <input type="number" step="0.01" name="Monthly_Balance"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
